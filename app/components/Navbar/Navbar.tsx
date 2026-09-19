@@ -8,6 +8,7 @@ const Navbar = () => {
         <>
             <li><Link className={`${pathname === "/" ? "text-blue-500" : ""}`} href={'/'}>Home</Link></li>
             <li><Link className={`${pathname === "/users" ? "text-blue-500" : ""}`} href={'/users'}>Users</Link></li>
+            <li><Link href={'/posts'}>Posts</Link></li>
         </>
     )
   return (
