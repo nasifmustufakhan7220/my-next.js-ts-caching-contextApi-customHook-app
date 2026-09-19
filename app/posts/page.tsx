@@ -1,9 +1,11 @@
 import IPostType from "@/types/posts";
 import PostCard from "../components/PostCard/PostCard";
 
+// export const dynamic = 'force-dynamic'
+
 const getPost = async()=>{
     try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts", {cache: 'force-cache'});
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts", {next : {revalidate: 60}});
         return res.json();
     } catch (error) {
         throw new Error(`${error} found`);
