@@ -7,8 +7,8 @@ const Navbar = () => {
     const links = (
         <>
             <li><Link className={`${pathname === "/" ? "text-blue-500" : ""}`} href={'/'}>Home</Link></li>
-            <li><Link className={`${pathname === "/users" ? "text-blue-500" : ""}`} href={'/users'}>Users</Link></li>
-            <li><Link href={'/posts'}>Posts</Link></li>
+            <li><Link className={`${pathname === "/users" || pathname.startsWith('/users') ? "text-blue-500" : ""}`} href={'/users'}>Users</Link></li>
+            <li><Link className={`${pathname === "/posts" || pathname.startsWith('/posts') ? "text-blue-500" : ""}`} href={'/posts'}>Posts</Link></li>
         </>
     )
   return (

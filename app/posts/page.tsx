@@ -16,7 +16,7 @@ const PostsPage = async() => {
     const posts : IPostType[] = await getPost();
 
     return (
-        <div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
             {
                 posts.map(post => <PostCard key={post.id} post={post} />)
             }
