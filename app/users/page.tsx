@@ -1,3 +1,4 @@
+import UserCard from "../components/UserCard/UserCard";
 
 
 const userFetch = async()=>{
@@ -12,11 +13,11 @@ const userFetch = async()=>{
 
 const UsersPage = async() => {
     const users = await userFetch();
-
-    console.log(users);
     return (
         <div>
-            
+            {
+                users.map(user=> <UserCard key={user.id} user={user} />)
+            }
         </div>
     );
 };
