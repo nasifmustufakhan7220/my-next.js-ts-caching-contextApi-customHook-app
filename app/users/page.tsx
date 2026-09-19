@@ -1,3 +1,4 @@
+import IUserType from "@/.next/types/user";
 import UserCard from "../components/UserCard/UserCard";
 
 
@@ -12,9 +13,9 @@ const userFetch = async()=>{
 
 
 const UsersPage = async() => {
-    const users = await userFetch();
+    const users: IUserType[] = await userFetch();
     return (
-        <div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
             {
                 users.map(user=> <UserCard key={user.id} user={user} />)
             }
