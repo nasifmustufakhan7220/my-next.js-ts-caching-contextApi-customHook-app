@@ -1,4 +1,5 @@
 import IUserType from "@/types/users";
+import Link from "next/link";
 
 interface IUserProps{
     user: IUserType
@@ -13,7 +14,7 @@ const UserCard = ({user}:IUserProps) => {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Show Details</button>
+          <Link href={`/users/${user.id}`}><button className="btn btn-primary">Show Details</button></Link>
         </div>
       </div>
     </div>
