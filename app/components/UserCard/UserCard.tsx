@@ -1,4 +1,4 @@
-import IUserType from "@/.next/types/user";
+import IUserType from "@/types/users";
 
 interface IUserProps{
     user: IUserType
