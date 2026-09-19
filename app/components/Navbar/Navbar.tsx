@@ -10,8 +10,6 @@ const Navbar = () => {
             <li><Link className={`${pathname === "/users" ? "text-blue-500" : ""}`} href={'/users'}>Users</Link></li>
         </>
     )
-
-
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
